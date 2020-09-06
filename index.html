@@ -52,37 +52,37 @@
   <div class="container main">
     <div class="row">
       <div class="four columns portfolio">
-        <img src="images/backpacker.jpg" alt="#">
+        <a class="image-link" href="images/backpacker.jpg"><img src="images/backpacker.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio">
-        <img src="images/desert_cycle.jpg" alt="#">
+        <a class="image-link" href="images/desert_cycle.jpg"><img src="images/desert_cycle.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg" alt="#">
+        <a class="image-link" href="images/italy_bikes.jpg"><img src="images/italy_bikes.jpg" alt="#"></a>
       </div>
     </div>
 
     <div class="row">
       <div class="four columns portfolio">
-        <img src="images/on_safari.jpg" alt="#">
+        <a class="image-link" href="images/on_safari.jpg"><img src="images/on_safari.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio">
-        <img src="images/overlook_mtn.jpg" alt="#">
+        <a class="image-link" href="images/overlook_mtn.jpg"><img src="images/overlook_mtn.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio"> 
-        <img src="images/paris_couple.jpg" alt="#">
+        <a class="image-link" href="images/paris_couple.jpg"><img src="images/paris_couple.jpg" alt="#"></a>
       </div>
     </div>
 
     <div class="row" style="margin-bottom: 10%;">
       <div class="four columns portfolio">
-        <img src="images/single_rider.jpg" alt="#">
+        <a class="image-link" href="images/single_rider.jpg"><img src="images/single_rider.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio">
-        <img src="images/sunset_beach.jpg" alt="#">
+        <a class="image-link" href="images/sunset_beach.jpg"><img src="images/sunset_beach.jpg" alt="#"></a>
       </div>
       <div class="four columns portfolio">
-        <img src="images/toes_sand.jpg" alt="#">
+        <a class="image-link" href="images/toes_sand.jpg"><img src="images/toes_sand.jpg" alt="#"></a>
       </div>
     </div>
   </div>
@@ -125,6 +125,32 @@
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+  <!-- Magnific Popup Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="scripts/jquery.magnific-popup.js"></script>
+  <script type="text/javascript">
+    $('.image-link').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function(openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      }
+
+    });
+  </script>
 </body>
 </html>
