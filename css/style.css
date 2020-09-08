@@ -12,7 +12,7 @@
 ------------------------------------------- */
 .main  {padding-top: 3%;}
 .row   {padding: 2% 0;}
-.green {background-color: #7accc8;}
+.green {background-color: #467f86;}
 
 /*  TYPOGRAPHY
 ------------------------------------------- */
@@ -28,7 +28,7 @@ h2 {
     margin: 0.67em;
 }
 
-h2.bio {color: #3f7f7c;}
+h2.bio {color: #b4fffb;}
 p.bio  {color: #fff;}
 
 /*  HEADER & NAVIGATION
